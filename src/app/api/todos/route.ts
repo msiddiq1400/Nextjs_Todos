@@ -49,7 +49,7 @@ export async function POST(request: Request) {
     return NextResponse.json(newTodo)
 }
 
-export async function UPDATE(request: Request) {
+export async function PUT(request: Request) {
     const { id, userId, title, completed }: Todo = await request.json()
     
     if (!userId || !title || !id || typeof(completed) !== 'boolean') {
